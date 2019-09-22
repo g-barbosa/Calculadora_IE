@@ -1,5 +1,5 @@
-import pytest
 from Calculos import Calculos
+
 
 def test_comodo():
     local = Calculos('sala', 4, 5)
