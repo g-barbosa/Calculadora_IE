@@ -37,7 +37,10 @@ class Calculos:
     def qntmin_tom(self):
         area = self.calculo_area()
         perimetro = self.calculo_perimetro()
-        if(self.comodo == "COZINHA") or (self.comodo == "COPA") or (self.comodo == "AREA DE SERVIÇO"):
+        if((self.comodo == "COZINHA") or
+           (self.comodo == "COPA") or
+           (self.comodo == "AREA DE SERVIÇO")):
+
             self.qntTom = (perimetro/3.5)+1
 
         elif (area > 6):

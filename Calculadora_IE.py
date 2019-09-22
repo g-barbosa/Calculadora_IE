@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Label, Entry, Button, Tk
 from Calculos import Calculos
 
 
@@ -39,7 +39,13 @@ def op1():
         tom = local.qntmin_tom()
 
         resultado = Label(janela)
-        resultado["text"] = ("CÔMODO: %s\nAREA: %.2f m²\nPERIMETRO: %.2f m\nPOTENCIA MINIMA DE LAMPADAS: %d VA\nQUANTIDADE MINIMA DE TOMADAS: %d TOMADA(S)"%(local.comodo, area, perimetro, pot, tom))
+        resultado["text"] = ("CÔMODO: %s\n"
+                             "AREA: %.2f m²\n"
+                             "PERIMETRO: %.2f m\n"
+                             "POTENCIA MINIMA DE LAMPADAS: %d VA\n"
+                             "QUANTIDADE MINIMA DE TOMADAS: %d TOMADA(S)"
+                             % (local.comodo, area, perimetro, pot, tom))
+
         resultado["bg"] = "Grey"
         resultado["font"] = ("arial black", "8", "bold")
         resultado.place(x=0, y=110)
@@ -60,7 +66,10 @@ pergunta1["bg"] = "Grey"  # muda a cor do background
 pergunta1["fg"] = "black"
 pergunta1["font"] = ("Arial black", "10", "bold")  # muda a fonte
 
-botao_lamp_tom = Button(janela, width=30, text="POTÊNCIA MÍNIMA DAS LÂMPADAS \n E QUANTIDADE MÍNIMA DE TOMADAS")
+botao_lamp_tom = Button(janela,
+                        width=30,
+                        text="POTÊNCIA MÍNIMA DAS LÂMPADAS\n"
+                        "E QUANTIDADE MÍNIMA DE TOMADAS")
 botao_lamp_tom["command"] = op1
 botao_lamp_tom.place(x=50, y=100)
 botao_lamp_tom["bg"] = "LightGrey"
